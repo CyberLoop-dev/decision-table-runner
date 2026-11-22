@@ -1,0 +1,8 @@
+{
+  "name": "decision-table-runner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Safe declarative JSON decision table evaluator",
+  "scripts": { "start": "node index.js" },
+  "engines": { "node": ">=18" }
+}

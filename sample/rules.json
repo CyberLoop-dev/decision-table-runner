@@ -1,0 +1,19 @@
+{
+  "rules": [
+    {
+      "id": "priority-eu-order",
+      "when": [
+        { "field": "amount", "op": "gte", "value": 1000 },
+        { "field": "region", "op": "in", "value": ["EU", "UK"] }
+      ],
+      "then": { "queue": "priority", "manualReview": true }
+    },
+    {
+      "id": "standard-order",
+      "when": [
+        { "field": "amount", "op": "gt", "value": 0 }
+      ],
+      "then": { "queue": "standard", "manualReview": false }
+    }
+  ]
+}
